@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="calculator">
+        <h2>Calculator</h2>
+        <input type="number" id="num1" placeholder="Enter first number">
+        <input type="number" id="num2" placeholder="Enter second number">
+        <div class="container">
+            <button class="btn" onclick="calculate('+')">+</button>
+            <button class="btn" onclick="calculate('-')">-</button>
+            <button class="btn" onclick="calculate('*')">*</button>
+            <button class="btn" onclick="calculate('/')">/</button>
+            <button class="btn" onclick="calculate('%')">%</button>
+            <button class="btn" onclick="calculate('^')">x^y</button>
+            <button class="btn" onclick="calculate('2root')">2root</button>
+            <button class="btn" onclick="calculate('3root')">3root</button>
+            <button class="btn" onclick="calculate('!')">x!</button>
+            <button class="btn" onclick="clearDisplay('AC')">AC</button>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
