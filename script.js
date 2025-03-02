@@ -1,59 +1,43 @@
-function factorial(num) {
-    if (num < 0) {
-        return "Undefined";
+function clear(){
+    document.getElementById('fnumber').value = '';
+    document.getElementById('snumber').value = '';
+    document.getElementById('result').textContent = '0';
+}
+function Add(){
+    let firstnumber = Number(document.getElementById("fnumber").value)
+    let secondnumber = Number(document.getElementById("snumber").value)
+    alert(firstnumber + secondnumber)
+}
+function Sub(){
+    let firstnumber = Number(document.getElementById("fnumber").value)
+    let secondnumber = Number(document.getElementById("snumber").value)
+    alert(firstnumber - secondnumber)
+}
+function mul(){
+    let firstnumber = Number(document.getElementById("fnumber").value)
+    let secondnumber = Number(document.getElementById("snumber").value)
+    alert(firstnumber * secondnumber)
+}
+function div(){
+    let firstnumber = Number(document.getElementById("fnumber").value)
+    let secondnumber = Number(document.getElementById("snumber").value)
+    alert(firstnumber / secondnumber)
+}
+function fact(){
+    let firstnumber = Number(document.getElementById("fnumber").value)
+    i = 0
+    fact = 1
+    for(i=1;i<=firstnumber;i++){
+        fact = fact * i ;
     }
-    let result = 1;
-    for (let i = 2; i <= num; i++) {
-        result *= i;
-    }
-    return result;
+    alert(fact)
+}
+function Percentage(){
+    let firstnumber = Number(document.getElementById("fnumber").value)
+    let secondnumber = Number(document.getElementById("snumber").value)
+    let per;
+    per = ( firstnumber / secondnumber) * 100;
+    alert(per)
 }
 
-function clearDisplay() {
-    let num1 = document.getElementById('num1').value = '';
-    let num2 = document.getElementById('num2').value = '';
-}
 
-function calculate(operation) {
-    let num1 = Number(document.getElementById("num1").value);
-    let num2 = Number(document.getElementById("num2").value);
-    let result;
-
-    switch (operation) {
-        case "+":
-            result = num1 + num2;
-            break;
-        case "-":
-            result = num1 - num2;
-            break;
-        case "*":
-            result = num1 * num2;
-            break;
-        case "/":
-            result = num1 / num2;
-            break;
-        case "%":
-            result = num1 % num2;
-            break;
-        case "^":
-            result = Math.pow(num1, num2);
-            break;
-        case "2root":
-            result = Math.sqrt(num1);
-            break;
-        case "3root":
-            result = Math.cbrt(num1);
-            break;
-        case "!":
-            result = factorial(num1);
-            break;
-        case "AC":
-            result = clearDisplay(num1)(num2);
-            break;
-        default:
-            result = "Invalid Operation";
-    }
-
-    alert("Result: " + result);
-    console.log("Result:", result);
-}
